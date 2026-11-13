@@ -1,0 +1,16 @@
+Raw dataset: 7787 rows x 12 columns, 3631 missing cells
+Trimmed leading/trailing whitespace in 89 cells (e.g. date_added)
+Removed 0 exact and 1 logical duplicate records
+Converted date_added from text ('August 14, 2020') to datetime
+Split duration ('93 min' / '4 Seasons') into duration_value (int) and duration_unit
+Merged rating 'UR' into 'NR' (unrated == not rated): 14 -> 13 categories
+Normalised comma-separated lists in country, cast, director, listed_in
+Added primary_country and primary_genre helper columns for easy grouping
+Filled 2389 missing 'director' with 'Unknown'
+Filled 718 missing 'cast' with 'Unknown'
+Filled 507 missing 'country' with 'Unknown'
+Filled 507 missing 'primary_country' with 'Unknown'
+Filled 7 missing 'rating' with 'NR'
+Left 10 missing date_added as NaT (cannot be inferred reliably)
+Validation: 0 rows with release_year in the future; release_year range 1925-2021
+Saved data/cleaned_data.csv: 7786 rows x 17 columns, 30 missing cells
